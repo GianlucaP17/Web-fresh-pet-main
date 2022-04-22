@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100&family=Josefin+Sans:wght@200;300;500;600;700&display=swap');
+:root{
+  --orange: #FF5423,
+  --light-orange: #fb6f59,
+  --gray: #766a6a,
+}
+
+.header {
+  height: 60px;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 3.2rem;
+  gap: 10px;
+}
+.logo-img {
+  width: 8.2rem;
+
+}
+
+.signin-cart-holder {
+  display: flex;
+
+
+}
+.signin-btn{
+  background-color: #FF5423;
+  padding: 9px 23px;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+  outline: none;
+  font-weight: 600;
+  transition: all 1s ease-in-out;
+  width: 100px;
+  font-size: 15px;
+  margin: auto;
+}
+ .icons{
+         text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #766a6a;
+    padding: 0.4rem 1.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+ .icons-logout{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #766a6a;
+    background-color: #FABC4D;
+    padding: 0.4rem 1.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.icons .product-num{
+  position: absolute;
+  top: 0rem;
+  left: 3rem;
+  background-color: #ff543d;
+  color: #ffffff;
+  font-size: 13px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.bone-img {
+  cursor: pointer;
+  animation: bone-img-animation 1s infinite;
+  transition: all 1s ease-in-out;
+}
+
+.bone-img:hover {
+  animation: none;
+  animation: scale 1s infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bone-img-animation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    
+  }
+  50% {
+    transform: translateY(0.5rem) rotate(8deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.slang {
+  position: absolute;
+  top: 45%;
+  padding-left: 4.8rem;
+  font-size: 3rem;
+  transform: translateY(-50%);
+  color: white;
+  letter-spacing: 1.8px;
+  font-family: 'Josefin Sans', sans-serif;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.header-image-icon{
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 10px;
+  animation: changeImage 10s ease-in-out both infinite;
+}
+@keyframes changeImage {
+  0% {
+    background-image: url('/public/img/cat-icon.png');
+  }
+  20% {
+    background-image: url('/public/img/dog-icon.png');
+  }
+  40% {
+    background-image: url('/public/img/horse-icon.png');
+  }
+  60% {
+    background-image: url('/public/img/fish-icon.png');
+  }
+  80% {
+    background-image: url('/public/img/dove-icon.png');
+  }
+  100% {
+    background-image: url('/public/img/cat-icon.png');
+  }
+}
+.icons-card{
+  display: flex;
+  gap: 10px;
+}
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(-50%);
+  }
+}
+
+/* @media screen and (max-width: 1024px) {
+  html {
+    font-size: 80.5%;
+  }
+  .signin-btn{
+    margin: auto 32px;
+    font-size: 1.2rem;
+  }
+  .slang {
+    font-size: 3.2rem;
+  }
+} */
+  
+@media screen and (max-width: 768px){
+  html {
+    font-size: 70.5%;
+  }
+
+  .slang {
+    font-size: 2.2rem;
+
+  }
+
+  .icons {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+/* @media screen and (max-width: 520px){
+  html {
+    font-size: 60.5%;
+  }
+  .signin-btn{
+    margin: auto 16px;
+    font-size: 1rem;
+  }
+
+  .icons {
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+  }
+} */
